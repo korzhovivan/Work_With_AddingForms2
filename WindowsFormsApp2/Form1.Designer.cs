@@ -31,6 +31,7 @@
             this.btn_Open = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.txtBox = new System.Windows.Forms.TextBox();
+            this.btn_Save = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Open
@@ -53,6 +54,7 @@
             this.btn_Edit.TabIndex = 1;
             this.btn_Edit.Text = "Edit";
             this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // txtBox
             // 
@@ -62,11 +64,23 @@
             this.txtBox.Size = new System.Drawing.Size(343, 332);
             this.txtBox.TabIndex = 2;
             // 
+            // btn_Save
+            // 
+            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_Save.Location = new System.Drawing.Point(137, 12);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(94, 37);
+            this.btn_Save.TabIndex = 3;
+            this.btn_Save.Text = "Save";
+            this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 399);
+            this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.txtBox);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_Open);
@@ -82,6 +96,7 @@
         private System.Windows.Forms.Button btn_Open;
         private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.TextBox txtBox;
+        private System.Windows.Forms.Button btn_Save;
     }
 }
 

@@ -30,7 +30,7 @@
         {
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBox_Edit = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_Save
@@ -55,20 +55,20 @@
             this.btn_Cancel.UseVisualStyleBackColor = true;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
-            // textBox1
+            // txtBox_Edit
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 55);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(394, 334);
-            this.textBox1.TabIndex = 3;
+            this.txtBox_Edit.Location = new System.Drawing.Point(12, 55);
+            this.txtBox_Edit.Multiline = true;
+            this.txtBox_Edit.Name = "txtBox_Edit";
+            this.txtBox_Edit.Size = new System.Drawing.Size(394, 334);
+            this.txtBox_Edit.TabIndex = 3;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 415);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBox_Edit);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Save);
             this.Name = "Form2";
@@ -82,6 +82,6 @@
 
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Cancel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBox_Edit;
     }
 }

@@ -13,6 +13,7 @@ namespace WindowsFormsApp2
 {
     public partial class Form1 : Form
     {
+        string currentFile;
         public Form1()
         {
             InitializeComponent();
@@ -26,8 +27,23 @@ namespace WindowsFormsApp2
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 txtBox.Text = File.ReadAllText(dialog.FileName, Encoding.Default);
-                  
+                currentFile = dialog.FileName;
             }
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+            Form2 editForm = new Form2(txtBox.Text);
+
+            if (editForm.ShowDialog() == DialogResult.OK)
+            {
+                txtBox.Text = editForm.TText;
+            }
+        }
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(currentFile, txtBox.Text, Encoding.Default);
         }
     }
 }

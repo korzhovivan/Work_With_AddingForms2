@@ -12,9 +12,11 @@ namespace WindowsFormsApp2
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public string TText { get; set; }
+        public Form2(string text)
         {
             InitializeComponent();
+            txtBox_Edit.Text = text;
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
@@ -25,6 +27,7 @@ namespace WindowsFormsApp2
         private void btn_Save_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            TText = txtBox_Edit.Text;
         }
     }
 }
